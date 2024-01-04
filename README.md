@@ -1,3 +1,5 @@
 NOMBRE: Marco Antonio Luna
+
 MATERIA: INF-122
+
 COLOR FAVORITO: #000080
