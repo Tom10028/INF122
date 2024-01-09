@@ -67,9 +67,9 @@ body{
     
 
 }
-icons-container{
+.icons-container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2,1fr);
     
     margin: 50px 260px 50px 260px;
     justify-content: center;
@@ -96,4 +96,15 @@ icons-container{
 .icon-text p{
     font-size: var(--sm);
     margin: 0;
+}
+
+@media(max-width: 720px){
+    .icons-container{
+        grid-template-columns: 1fr;
+        margin: 50px 10px 50px 10px;
+    }
+    .brochure p{
+        display: none;
+    }
+
 }
