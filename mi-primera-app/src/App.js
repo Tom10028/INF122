@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import Evento from './components/Evento.js'
+import EventoB from './components/EventoB.js';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='app'>
+        <Evento/>
+        <EventoB 
+          image="evento1"
+          title="pu Pizza 03-PyPuzzle"
+          dateLiteral="Mr Pizza, 20 de Octubre Frente la plaza avaroa"
+          placeLiteral="09 de Diciembre de 2023 - 13:30 GMT-4"
+          description="Holaaaaa" />
+      </div>
+
     </div>
   );
 }
