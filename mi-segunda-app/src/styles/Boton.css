@@ -1,0 +1,19 @@
+button{
+    width: 150px;
+    height: 80px;
+    font-family: Roboto,sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 24px;
+    background-color: #ff872c;
+    color: white;
+}
+.botonlargo{
+
+    width: 300px;
+}
+button:hover{
+    background-color: #dcdde5;
+    color:#ff872c;
+}
