@@ -1,10 +1,10 @@
 import React from "react";
 import '../styles/Contador.css'
-function Contador({nroClicks}){
+function Contador({nroClicks, mostrar}){
     return(
-        <div className="contador">
+         mostrar ? <div className="contador">
             {nroClicks}
-        </div>
+        </div> : null
     )
 }
 export default Contador;

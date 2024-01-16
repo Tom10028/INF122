@@ -5,6 +5,7 @@ import Contador from './components/Contador';
 import Boton2 from './components/Boton2';
 function App() {
   const[nroClicks, setNumClicks]=useState(0);
+  const[show,setShow]=useState(true);
   const resta3 = ()=>{
     console.log("click");
     setNumClicks(nroClicks-3);
@@ -29,14 +30,14 @@ function App() {
   return (
     <div className="App">
       <div className='contenedor-principal'>
-        <Contador nroClicks={nroClicks}/>
+        <Contador nroClicks={nroClicks} mostrar={show}/>
         <div className='contenedor-botones'>
           <Boton texto="-3" esBotonClick={true} funcionClick={resta3} />
           <Boton texto="+3" esBotonClick={false} funcionClick={suma3} />
           <Boton texto="-1" esBotonClick={true} funcionClick={resta1} />
           <Boton texto="+1" esBotonClick={true} funcionClick={suma1} />
           <Boton texto="reiniciar" esBotonClick={true} funcionClick={reiniciar}  className="botonlargo" />
-          <Boton2 texto="Mostrar" esBotonClick={true} funcionClick={mostrar}/>
+          <Boton2 texto="mostrar" esBotonClick={true} funcionClick={mostrar}/>
         </div> 
 
       </div>
