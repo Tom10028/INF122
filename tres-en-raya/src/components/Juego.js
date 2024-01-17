@@ -13,12 +13,12 @@ function Juego(){
         ]
     );
 
-    const [nroMovimientos, setNroMovimiento]=useState(0);
+    const [nroMovimiento, setNroMovimiento]=useState(0);
     const[cuadros, setCuadros]=useState(Array(9).fill(null));
     const [jugador, setJugador]=useState("x");
     const[ganador,setGanador]=useState(null);
     const click=(i)=>{      
-        const nuevoMovimiento = historial.slice(0,nroMovimientos +1);
+        const nuevoMovimiento = historial.slice(0,nroMovimiento +1);
         console.log("nuevoMovimiento", nuevoMovimiento);
         const movimientoActual = nuevoMovimiento[nuevoMovimiento.length-1];
         console.log("movimientoActual: " + movimientoActual)
@@ -28,29 +28,26 @@ function Juego(){
         if(cuadros[i]===null){ 
             cuadros[i]=jugador; 
             setCuadros(cuadros);
+            setJugador(jugador=== "x" ? "o" : "x" );
             setHistorial (nuevoMovimiento.concat([{cuadros}]));
             setNroMovimiento(nuevoMovimiento.length);
-            if(jugador==="x"){
-                setJugador("o");
-            }else{
-                    setJugador("x");
-            }            
+                        
         }
         if(calcularGanador(cuadros) !==null){           
-            setCuadros(calcularGanador(cuadros));
+            setGanador(calcularGanador(cuadros));
         }
     }
     const saltarA=(movimiento)=>{
         console.log("movimiento", movimiento);
         setNroMovimiento(movimiento);
-        setJugador(jugador === "X" ? "O" : "X");        
+        setJugador(jugador === "x" ? "o" : "x");        
     }
-    const movimientoActual = historial[nroMovimientos];
+    const movimientoActual = historial[nroMovimiento];
     return(
         <div className='juego'>
             <div className='juego-tablero'>
                 <h2>{ganador ? `Ganador: ${ganador}`:`Proximo jugador: ${jugador}` }</h2>
-                <Tablero cuadros={cuadros} onClick={(i) => click(i)} />
+                <Tablero cuadros={movimientoActual.cuadros} onClick={(i) => click(i)} />
             </div>
             <Historial historial = {historial} saltarA= {saltarA}/>
         </div>
