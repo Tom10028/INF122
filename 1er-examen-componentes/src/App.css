@@ -1,0 +1,28 @@
+:root {
+  --primary-background: #0C151D;
+  --secondary-background: #171F26;
+  --primary-clear: #F1F2F4;
+  --secondary-clear: #A3ABB2;
+  --white: #FFFFFF;
+  --yellow: #FFE071;
+  --xs: 14px;
+  --sm: 22px;
+  --md: 24px;
+  --lg: 46px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-background);
+  font-family: Poppins;
+}
+
+.main {
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
