@@ -16,7 +16,7 @@ function Dog(){
             <header>
                 <h2>Spanish Waterdog</h2>
             </header>
-            <Image src={dog} className={style["image"]} alt="perrito-random" width={500} height={500}/>
+            <Image src={dog} className={style["image"]} alt="perrito-random" width={500} height={500} />
         </div>
 
     );
