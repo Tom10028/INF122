@@ -67,7 +67,7 @@ function calcularGanador(cuadros){
     ];
     for(let i=0;i<lineas.length;i++){
         const[a,b,c]=lineas[i];
-        if(cuadros[a]&&cuadros[a]=== cuadros[b]&&cuadros[b]===cuadros[c]){
+        if(cuadros[a]&&cuadros[a]=== cuadros[b]&&cuadros[a]===cuadros[c]){
             return cuadros[a];
         }
     }
